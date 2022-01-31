@@ -5,28 +5,6 @@ import ExpenseList from "./components/ExpenseList";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
-// const initialExpenses = [
-//   {
-//     id: uuidv4(),
-//     charge: "rent",
-//     amount: 1600,
-//   },
-//   {
-//     id: uuidv4(),
-//     charge: "car payment",
-//     amount: 600,
-//   },
-//   {
-//     id: uuidv4(),
-//     charge: "credit card bill",
-//     amount: 850,
-//   },
-// ];
-
-// const initialExpenses = localStorage.getItem("expenses")
-//   ? JSON.parse(localStorage.getItem("expenses"))
-//   : [];
-
 const initialExpenses = JSON.parse(localStorage.getItem("expenses"))
   ? JSON.parse(localStorage.getItem("expenses"))
   : [];
@@ -114,7 +92,7 @@ function App() {
   return (
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
-      <h1>Budget Calculator</h1>
+      <h1>Budget Calculator App</h1>
       <main className="App">
         <ExpenseForm
           charge={charge}
